@@ -55,7 +55,7 @@ export const PaymentVerification = async (req, res) => {
             });
 
             res.redirect(
-                `http://localhost:3000/cart`
+                `https://e-comm-frontend-ubxq.onrender.com/cart`
             );
 
         }
