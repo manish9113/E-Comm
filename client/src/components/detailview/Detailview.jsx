@@ -28,8 +28,8 @@ const Detailview = () => {
 
   const handleorder=async(totalAmount)=>{
     try{
-        const {data:{order}}=await axios.post("http://localhost:8000/checkout",{totalAmount});
-        const {api_key} = await axios.get("http://localhost:8000/getapikey");
+        const {data:{order}}=await axios.post("https://e-comm-backend-sst3.onrender.com/checkout",{totalAmount});
+        const {api_key} = await axios.get("https://e-comm-backend-sst3.onrender.com/getapikey");
         
     
         const options = {
@@ -39,7 +39,7 @@ const Detailview = () => {
           name: "username of sender",
           description: "Test Transaction",
           order_id: order.id, // This is the order_id created in the backend
-          callback_url: "http://localhost:8000/paymentverification", // Your success URL
+          callback_url: "https://e-comm-backend-sst3.onrender.com/paymentverification", // Your success URL
           prefill: {
             name: "Gaurav Kumar",
             email: "gaurav.kumar@example.com",
