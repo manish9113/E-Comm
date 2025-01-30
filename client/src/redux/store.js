@@ -5,7 +5,7 @@ import { persistStore, persistReducer } from "redux-persist"
 import storage from "redux-persist/lib/storage"
 
 
-const URL = "http://localhost:8000";
+const URL = "https://e-comm-backend-sst3.onrender.com";
 
 
 export const fetchProducts = createAsyncThunk(
